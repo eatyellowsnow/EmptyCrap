@@ -1,6 +1,19 @@
 require "./account.rb"
 require "./user.rb"
 require 'rspec'
+require "rubygems"
+require "selenium-webdriver"
+
+driver = Selenium::WebDriver.for :firefox
+driver.navigate.to "http://google.com"
+
+element = driver.find_element(:name,'q')
+element.send_keys "KSDJSDKSDJ!"
+element.submit
+
+driver.quit
+
+
 
 describe Account do
   before(:all) do
