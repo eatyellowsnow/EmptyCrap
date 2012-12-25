@@ -6,8 +6,9 @@ require "selenium-webdriver"
 
 driver = Selenium::WebDriver.for :firefox
 driver.manage.timeouts.implicit_wait = 30
-driver.navigate.to "http://0.0.0.0:3000"
-driver.navigate.to "/#main"
+driver.navigate.to "http://172.18.8.251:3000/#main"
+sleep(30)
+
 
 element = driver.find_element(:id,'loginlink').click
 #element.send_keys "new text!"
