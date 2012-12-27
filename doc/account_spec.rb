@@ -10,7 +10,7 @@ driver.navigate.to "http://0.0.0.0:3000"
 sleep(30)
 
 
-element = driver.find_element(:id,'loginLink').click
+driver.find_element(:link, "About your application’s environment").click
 #element.send_keys "new text!"
 #element.submit
 
